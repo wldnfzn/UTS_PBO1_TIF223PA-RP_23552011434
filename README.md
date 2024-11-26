@@ -1,65 +1,76 @@
-Pengertian dan Penjelasan Konsep
+UTS Pemrograman Berorientasi Obyek 1
 
-Studi kasus ini menggabungkan empat konsep dasar pemrograman berorientasi objek (OOP): Inheritance, Polymorphism, Encapsulation, dan Interface.
+•	Mata Kuliah: Pemrograman Berorientasi Obyek 1
 
-1. Inheritance (Pewarisan)
-Inheritance memungkinkan kelas anak (subclass) untuk mewarisi atribut dan metode dari kelas induk (superclass).
+•	Dosen Pengampu: Muhammad Ikhwan Fathulloh
 
-Implementasi dalam kode:
-Rekening adalah kelas induk dengan atribut umum seperti accountNumber, balance, dan accountType.
-RekeningTabungan dan RekeningGiro adalah subclass yang mewarisi dari Rekening dan menambahkan logika khusus, seperti metode calculateInterest() yang berbeda untuk masing-masing jenis rekening.
+Profil
 
-2. Polymorphism
-Polymorphism memungkinkan metode yang sama memiliki implementasi berbeda pada kelas yang berbeda.
+•	Nama: Wildan Fauzan
 
-Implementasi dalam kode:
-Metode calculateInterest() di RekeningTabungan dan RekeningGiro memiliki logika berbeda.
-Program memanggil metode yang sesuai dengan jenis rekening secara otomatis.
+•	NIM: 23552011434
 
-3. Encapsulation
-Encapsulation menyembunyikan detail implementasi dan hanya memberikan akses ke data melalui metode tertentu.
+•	Studi Kasus: Aplikasi Manajemen Keuangan
 
-Implementasi dalam kode:
-Kelas Transaksi memiliki atribut date, amount, type, dan accountNumber yang hanya dapat diakses melalui konstruktor dan metode toString().
+Judul Studi Kasus
 
-4. Interface
-Interface digunakan untuk mendefinisikan kontrak metode yang harus diimplementasikan oleh kelas.
+	“ Implementasi Konsep OOP dalam Aplikasi Manajemen Keuangan Menggunakan Java “
 
-Implementasi dalam kode:
-FinancialService adalah interface yang mendefinisikan metode deposit() dan withdraw().
+Penjelasan 4 pilar OOP dalam Studi Kasus
+1.	Inheritance
+   
+•	Konsep:
 
-Penjelasan Logika Program di Main.java
-1. Alur Utama
+Inheritance memungkinkan sebuah kelas mewarisi atribut dan metode dari kelas induk.
 
-Program memiliki menu utama dengan 5 pilihan:
-Membuka rekening baru.
-Melakukan transaksi keuangan (setor/tarik).
-Menghitung bunga.
-Menampilkan laporan keuangan berdasarkan nomor rekening.
-Keluar dari program.
-2. Daftar Rekening
+•	Penerapan dalam Studi Kasus:
 
-Data rekening disimpan dalam ArrayList<Rekening> bernama accounts.
-3. Daftar Transaksi
+a.	Kelas Rekening adalah kelas induk yang memiliki atribut umum seperti accountNumber, balance, dan accountType.
 
-Semua transaksi disimpan dalam ArrayList<Transaksi> bernama transactions.
+b.	Kelas RekeningTabungan dan RekeningGiro adalah kelas turunan yang mewarisi semua atribut dan metode dari Rekening.
 
-Penjelasan Per Fungsi
-a. Membuka Rekening
-Metode openAccount() meminta pengguna memasukkan nomor rekening, saldo awal, dan jenis rekening (Tabungan atau Giro). Kemudian, rekening baru ditambahkan ke daftar accounts.
+c.	Dengan inheritance, kita dapat menambahkan logika khusus untuk setiap jenis rekening di kelas turunannya tanpa mengulangi kode yang sudah ada di kelas induk.
 
-b. Transaksi Keuangan
-Metode handleTransaction() meminta nomor rekening, lalu memproses setoran atau penarikan. Catatan transaksi disimpan dalam daftar transactions.
+2. Encapsulation
 
-c. Menghitung Bunga
-Metode calculateInterest() meminta nomor rekening, lalu memanggil metode calculateInterest() dari objek rekening terkait.
+•	Konsep:
 
-d. Laporan Keuangan
-Metode generateReport() meminta nomor rekening, lalu menampilkan transaksi yang sesuai dari daftar transactions.
+Encapsulation adalah melindungi data dengan cara membatasi akses langsung ke atribut melalui penggunaan metode getter dan setter.
 
-Kesimpulan
-Kode ini dirancang untuk:
+•	Penerapan dalam Studi Kasus:
 
-Memisahkan tanggung jawab antar kelas (modular).
-Menggunakan prinsip OOP (Inheritance, Polymorphism, Encapsulation, dan Interface).
-Menyimpan data transaksi dan rekening secara terorganisir dalam daftar.
+a.	Pada kelas Transaksi, atribut seperti accountNumber, date, amount, dan type tidak dapat diakses langsung dari luar kelas.
+
+b.	Pengguna hanya bisa mengakses data ini melalui metode yang aman, seperti toString() untuk menampilkan transaksi.
+
+3. Polymorphism
+   
+•	Konsep:
+
+Polymorphism memungkinkan metode yang sama memiliki implementasi berbeda di kelas yang berbeda.
+
+•	Penerapan dalam Studi Kasus:
+
+a.	Metode calculateInterest() adalah metode abstrak di kelas induk Rekening.
+
+b.	Kelas turunan seperti RekeningTabungan dan RekeningGiro mengimplementasikan metode ini dengan cara berbeda.
+
+c.	RekeningTabungan menghitung bunga berdasarkan saldo harian.
+
+d.	RekeningGiro menghitung bunga berdasarkan saldo bulanan.
+
+e.	Saat calculateInterest() dipanggil, aplikasi akan memilih implementasi yang sesuai berdasarkan objeknya.
+
+4.	Abstract
+    
+•	Konsep:
+
+Abstract adalah menyembunyikan detail implementasi dan hanya menampilkan fungsionalitas penting kepada pengguna.
+
+•	Penerapan dalam Studi Kasus:
+
+a.	Interface FinancialService berfungsi sebagai kontrak yang mendefinisikan metode deposit() dan withdraw().
+
+b.	Kelas seperti RekeningTabungan dan RekeningGiro mengimplementasikan metode ini sesuai kebutuhan masing-masing.
+
+c.	Dengan abstraksi, pengguna hanya perlu tahu bahwa semua jenis rekening dapat melakukan setor dan tarik, tanpa perlu tahu detail implementasinya.
