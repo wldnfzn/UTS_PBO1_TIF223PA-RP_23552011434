@@ -74,3 +74,9 @@ a.	Interface FinancialService berfungsi sebagai kontrak yang mendefinisikan meto
 b.	Kelas seperti RekeningTabungan dan RekeningGiro mengimplementasikan metode ini sesuai kebutuhan masing-masing.
 
 c.	Dengan abstraksi, pengguna hanya perlu tahu bahwa semua jenis rekening dapat melakukan setor dan tarik, tanpa perlu tahu detail implementasinya.
+
+DEMO PROYEK
+
+GITHUB : https://github.com/wldnfzn/UTS_PBO1_TIF223PA-RP_23552011434
+
+YOUTUBE
