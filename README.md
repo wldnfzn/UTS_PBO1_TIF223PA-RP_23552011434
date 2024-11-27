@@ -79,4 +79,4 @@ DEMO PROYEK
 
 GITHUB : https://github.com/wldnfzn/UTS_PBO1_TIF223PA-RP_23552011434
 
-YOUTUBE
+YOUTUBE : https://youtu.be/_vgD2xmn5Tc
